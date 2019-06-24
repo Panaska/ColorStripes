@@ -1,7 +1,38 @@
 h1 {
-  margin: 50px auto;
-  color:#00FFAA;
-  border: 3px brown;
-  background-color: beige;
+
+  color:#562020;
+
   padding:30px;
+  font-size:3em;
+  font-family:sans-serif;
+  /*border-radius: 50%;*/
+  text-align: center;
+}
+
+#container {
+  border: 3px brown;
+  background-color: #cc8196;
+  width: 50%;
+margin: 2em auto;
+}
+
+#wrap1 {
+  width:100%;
+  background-color: red;
+margin: 2em auto;
+}
+#wrap2 {
+  width:85%;
+  background-color: green;
+  margin: 2em auto;
+}
+#wrap3 {
+  width:70%;
+  background-color: blue;
+  margin: 2em auto;
+}
+#wrap4 {
+  width:65%;
+  background-color: yellow;
+  margin: 2em auto;
 }
