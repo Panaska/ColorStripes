@@ -12,27 +12,27 @@ h1 {
 #container {
   border: 3px brown;
   background-color: #cc8196;
-  width: 50%;
+  width: 52%;
 margin: 2em auto;
 }
 
 #wrap1 {
   width:100%;
-  background-color: red;
+  background-color: #00AD5A;
 margin: 2em auto;
 }
 #wrap2 {
-  width:85%;
-  background-color: green;
+  width:88%;
+  background-color: #FF0011;
   margin: 2em auto;
 }
 #wrap3 {
-  width:70%;
-  background-color: blue;
+  width:76%;
+  background-color: #00BFFF;
   margin: 2em auto;
 }
 #wrap4 {
-  width:65%;
-  background-color: yellow;
+  width:64%;
+  background-color: #FF5E00;
   margin: 2em auto;
 }
