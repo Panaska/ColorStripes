@@ -1,9 +1,6 @@
 "use strict";
 
 
-
-randomColor();
-
 function randomColor() {
 
     var nodelist = document.getElementsByClassName("differentColors").length;
