@@ -1,17 +1,19 @@
 "use strict";
 
 function addingSomething(something) {
-  let nodelist = document.getElementsByClassName("something").length;
+  //console.log (n);
+  let nodelist = document.getElementsByClassName(something).length;
   for (let i = 1; i <= nodelist; i++) {
-    let k = "something" + i;
+    let k = something + i;
     let node = document.getElementById(k);
     let randTop = Math.floor(Math.random() * 80);
     let randLeft = Math.floor(Math.random() * 80);
     node.style.top = randTop + "%";
     node.style.left = randLeft + "%";
     node.style.visibility="visible";
-    node.style.backgroundColor=randomColor();
-    node.style.borderBottomColor=randomColor();
+
+    if(something == 'star') node.style.borderBottomColor=randomColor();
+    else node.style.backgroundColor=randomColor();
   }
 }
 
