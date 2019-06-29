@@ -1,5 +1,20 @@
 "use strict";
 
+function addingSomething(something) {
+  let nodelist = document.getElementsByClassName("something").length;
+  for (let i = 1; i <= nodelist; i++) {
+    let k = "something" + i;
+    let node = document.getElementById(k);
+    let randTop = Math.floor(Math.random() * 80);
+    let randLeft = Math.floor(Math.random() * 80);
+    node.style.top = randTop + "%";
+    node.style.left = randLeft + "%";
+    node.style.visibility="visible";
+    node.style.backgroundColor=randomColor();
+    node.style.borderBottomColor=randomColor();
+  }
+}
+
 function randomColor() {
   let colorAuto = "#";
 
@@ -42,58 +57,58 @@ function paintStripes() {
     }
 }
 
-function addingSquare() {
-  let nodelist = document.getElementsByClassName("square").length;
-  for (let i = 1; i <= nodelist; i++) {
-    let k = "square" + i;
-    let node = document.getElementById(k);
-    let randTop = Math.floor(Math.random() * 85);
-    let randLeft = Math.floor(Math.random() * 85);
-    node.style.top = randTop + "%";
-    node.style.left = randLeft + "%";
-node.style.visibility="visible";
-node.style.backgroundColor=randomColor();
-  }
-}
+// function addingSquare() {
+//   let nodelist = document.getElementsByClassName("square").length;
+//   for (let i = 1; i <= nodelist; i++) {
+//     let k = "square" + i;
+//     let node = document.getElementById(k);
+//     let randTop = Math.floor(Math.random() * 85);
+//     let randLeft = Math.floor(Math.random() * 85);
+//     node.style.top = randTop + "%";
+//     node.style.left = randLeft + "%";
+// node.style.visibility="visible";
+// node.style.backgroundColor=randomColor();
+//   }
+// }
+//
+// function addingCircle() {
+//   let nodelist = document.getElementsByClassName("round").length;
+//   for (let i = 1; i <= nodelist; i++) {
+//     let k = "round" + i;
+//     let node = document.getElementById(k);
+//     let randTop = Math.floor(Math.random() * 85);
+//     let randLeft = Math.floor(Math.random() * 85);
+//     node.style.top = randTop + "%";
+//     node.style.left = randLeft + "%";
+// node.style.visibility="visible";
+// node.style.backgroundColor=randomColor();
+//   }
+// }
+//
+// function addingHeart() {
+//   let nodelist = document.getElementsByClassName("heart").length;
+//   for (let i = 1; i <= nodelist; i++) {
+//     let k = "heart" + i;
+//     let node = document.getElementById(k);
+//     let randTop = Math.floor(Math.random() * 83);
+//     let randLeft = Math.floor(Math.random() * 83);
+//     node.style.top = randTop + "%";
+//     node.style.left = randLeft + "%";
+// node.style.visibility="visible";
+// node.style.backgroundColor=randomColor();
+//   }
+// }
 
-function addingCircle() {
-  let nodelist = document.getElementsByClassName("round").length;
-  for (let i = 1; i <= nodelist; i++) {
-    let k = "round" + i;
-    let node = document.getElementById(k);
-    let randTop = Math.floor(Math.random() * 85);
-    let randLeft = Math.floor(Math.random() * 85);
-    node.style.top = randTop + "%";
-    node.style.left = randLeft + "%";
-node.style.visibility="visible";
-node.style.backgroundColor=randomColor();
-  }
-}
-
-function addingHeart() {
-  let nodelist = document.getElementsByClassName("heart").length;
-  for (let i = 1; i <= nodelist; i++) {
-    let k = "heart" + i;
-    let node = document.getElementById(k);
-    let randTop = Math.floor(Math.random() * 83);
-    let randLeft = Math.floor(Math.random() * 83);
-    node.style.top = randTop + "%";
-    node.style.left = randLeft + "%";
-node.style.visibility="visible";
-node.style.backgroundColor=randomColor();
-  }
-}
-
-function addingStar() {
-  let nodelist = document.getElementsByClassName("star").length;
-  for (let i = 1; i <= nodelist; i++) {
-    let k = "star" + i;
-    let node = document.getElementById(k);
-    let randTop = Math.floor(Math.random() * 81);
-    let randLeft = Math.floor(Math.random() * 81);
-    node.style.top = randTop + "%";
-    node.style.left = randLeft + "%";
-node.style.visibility="visible";
-node.style.borderBottomColor=randomColor();
-  }
-}
+// function addingStar() {
+//   let nodelist = document.getElementsByClassName("star").length;
+//   for (let i = 1; i <= nodelist; i++) {
+//     let k = "star" + i;
+//     let node = document.getElementById(k);
+//     let randTop = Math.floor(Math.random() * 81);
+//     let randLeft = Math.floor(Math.random() * 81);
+//     node.style.top = randTop + "%";
+//     node.style.left = randLeft + "%";
+// node.style.visibility="visible";
+// node.style.borderBottomColor=randomColor();
+//   }
+// }
