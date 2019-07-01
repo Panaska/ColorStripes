@@ -42,6 +42,30 @@ function randomColor() {
 return colorAuto;
 }
 
+function redColor() {
+  let colorAuto = "#";
+
+  for (let f = 0; f < 6; f++) {
+      let rand = Math.floor(Math.random() * 16);
+      if (rand >= 5 && rand <= 15) {
+          colorAuto += rand;
+      } else if (rand > 2 && f == 3) {
+          rand = "E";
+      } else if (rand > 7 && f < 2) {
+          rand = "A";
+      } else if (rand > 8 && f < 5) {
+          rand = "C";
+      } else if (rand > 3 && f < 1) {
+          rand = "D";
+      } else if (rand == 4 && f < 7) {
+          rand = "F";
+      }
+      colorAuto += rand;
+  }
+
+return colorAuto;
+}
+
 
 function paintStripes() {
 
