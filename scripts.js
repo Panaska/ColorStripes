@@ -44,13 +44,18 @@ return colorAuto;
 
 function redColor() {
   let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-  let colorAuto = "#";
+  let colorAuto = "#FF";
 
-  for (let f = 0; f < 6; f++) {
+  for (let f = 0; f < 4; f++) {
       let rand = Math.floor(Math.random() * 16);
       colorAuto += colors[rand];
   }
-
+// if (colorAuto >= "470000" && colorAuto <= "FF5C5C") {
+//   console.log(colorAuto);
+//   return ("#" + colorAuto);
+// }
+//
+// else redColor();
 return colorAuto;
 }
 
