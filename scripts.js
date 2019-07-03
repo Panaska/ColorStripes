@@ -13,8 +13,8 @@ function addingSomething(something) {
     node.style.left = randLeft + "%";
     node.style.visibility="visible";
 
-    if(something == 'star') node.style.borderBottomColor=randomColor();
-    else node.style.backgroundColor=randomColor();
+    if(something == 'star') node.style.borderBottomColor=redColor();
+    else node.style.backgroundColor=redColor();
   }
 }
 
@@ -43,24 +43,12 @@ return colorAuto;
 }
 
 function redColor() {
+  let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
   let colorAuto = "#";
 
   for (let f = 0; f < 6; f++) {
       let rand = Math.floor(Math.random() * 16);
-      if (rand >= 5 && rand <= 15) {
-          colorAuto += rand;
-      } else if (rand > 2 && f == 3) {
-          rand = "E";
-      } else if (rand > 7 && f < 2) {
-          rand = "A";
-      } else if (rand > 8 && f < 5) {
-          rand = "C";
-      } else if (rand > 3 && f < 1) {
-          rand = "D";
-      } else if (rand == 4 && f < 7) {
-          rand = "F";
-      }
-      colorAuto += rand;
+      colorAuto += colors[rand];
   }
 
 return colorAuto;
@@ -75,7 +63,7 @@ function paintStripes() {
         let k = "wrap" + i;
         let node = document.getElementsByClassName(k)[0];
 
-        node.style.backgroundColor = randomColor();
+        node.style.backgroundColor = redColor();
 
       // console.log(node.style.backgroundColor);
 
