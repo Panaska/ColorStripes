@@ -13,40 +13,49 @@ function addingSomething(something) {
     node.style.left = randLeft + "%";
     node.style.visibility="visible";
 
-    if(something == 'star') node.style.borderBottomColor=redColor();
-    else node.style.backgroundColor=redColor();
+    if(something == 'star') node.style.borderBottomColor=randomColor();
+    else node.style.backgroundColor=randomColor();
   }
 }
 
 function randomColor() {
+  let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
   let colorAuto = "#";
-
   for (let f = 0; f < 6; f++) {
-      let rand = Math.floor(Math.random() * 10);
-      if (rand > 5 && f == 0) {
-          rand = "B";
-      } else if (rand > 2 && f == 3) {
-          rand = "E";
-      } else if (rand > 7 && f < 2) {
-          rand = "A";
-      } else if (rand > 8 && f < 5) {
-          rand = "C";
-      } else if (rand > 3 && f < 1) {
-          rand = "D";
-      } else if (rand == 4 && f < 7) {
-          rand = "F";
-      }
-      colorAuto += rand;
+      let rand = Math.floor(Math.random() * 16);
+      colorAuto += colors[rand];
   }
 
 return colorAuto;
+//   let colorAuto = "#";
+//
+//   for (let f = 0; f < 6; f++) {
+//       let rand = Math.floor(Math.random() * 10);
+//       if (rand > 5 && f == 0) {
+//           rand = "B";
+//       } else if (rand > 2 && f == 3) {
+//           rand = "E";
+//       } else if (rand > 7 && f < 2) {
+//           rand = "A";
+//       } else if (rand > 8 && f < 5) {
+//           rand = "C";
+//       } else if (rand > 3 && f < 1) {
+//           rand = "D";
+//       } else if (rand == 4 && f < 7) {
+//           rand = "F";
+//       }
+//       colorAuto += rand;
+//   }
+//
+// return colorAuto;
 }
 
 function redColor() {
   let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
   let colorAuto = "#FF";
-
-  for (let f = 0; f < 4; f++) {
+let rand1 = Math.floor(Math.random() * 5);
+colorAuto += rand1
+  for (let f = 0; f < 3; f++) {
       let rand = Math.floor(Math.random() * 16);
       colorAuto += colors[rand];
   }
@@ -59,8 +68,36 @@ function redColor() {
 return colorAuto;
 }
 
+function greenColor() {
+  let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+  let colorAuto = "#";
+  for (let f = 0; f < 2; f++) {
+      let rand = Math.floor(Math.random() * 16);
+      colorAuto += colors[rand];
+  }
+  colorAuto += 'FF';
 
-function paintStripes() {
+  for (let f = 0; f < 2; f++) {
+      let rand = Math.floor(Math.random() * 16);
+      colorAuto += colors[rand];
+  }
+
+return colorAuto;
+}
+
+function blueColor() {
+  let colors = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+  let colorAuto = "#";
+
+  for (let f = 0; f < 4; f++) {
+      let rand = Math.floor(Math.random() * 16);
+      colorAuto += colors[rand];
+  }
+
+return colorAuto + 'FF';
+}
+
+function paintStripes(color) {
 
     let nodelist = document.getElementsByClassName("differentColors").length;
     //console.log(nodelist);
@@ -68,8 +105,19 @@ function paintStripes() {
         let k = "wrap" + i;
         let node = document.getElementsByClassName(k)[0];
 
-        node.style.backgroundColor = redColor();
 
+if (color == 'red') {
+  node.style.backgroundColor = redColor();
+}
+else if (color == 'green') {
+  node.style.backgroundColor = greenColor();
+}
+else if (color == 'blue') {
+  node.style.backgroundColor = blueColor();
+}
+else {
+  node.style.backgroundColor = randomColor();
+}
       // console.log(node.style.backgroundColor);
 
       //  node.style.boxShadow = '2px 2px 5px 1px ' + colorAuto + ',  4px 4px 2px 0px black';
